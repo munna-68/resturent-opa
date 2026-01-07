@@ -101,6 +101,7 @@ button.nav-btn {
   font-size: 2.5rem;
   border: none;
   margin-top: 2.5rem;
+  padding: 0 20px;
 }
 
 .right-div {
@@ -133,22 +134,28 @@ h2 {
   align-self: flex-start;
 }
 
-.home-description {
-  font-family: 'Roboto Condensed';
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 300;
+.home {
   line-height: 1.25;
   margin-top: 3.5rem;
 }
 
-.home-sub-txt {
+.description {
+  font-family: 'Roboto Condensed';
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.home-sub {
+  margin-top: 1.5rem;
+}
+
+.sub-txt {
   font-family: 'Roboto Condensed';
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 200;
   line-height: 1.25;
-  margin-top: 1.5rem;
 }
 
 .home-btn {
@@ -168,4 +175,34 @@ h2 {
   gap: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+button.active {
+  border-bottom: solid 1px black;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-heading-container {
+  display: flex;
+}
+
+.line {
+  height: 1px;
+  flex-grow: 10;
+  align-self: center;
+  background-color: black;
+  margin-top: 3.5rem;
+
+}
+
+.menu-h2 {
+  flex-grow: 1;
+}
+
+.menu.sub-txt {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
