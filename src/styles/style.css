@@ -203,7 +203,8 @@ button.active {
 }
 
 .menu.sub-txt {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .menu-img {
@@ -252,4 +253,21 @@ button.active {
   font-family: 'Caveat Brush';
   font-style: normal;
   font-weight: 400;  
+}
+
+.contact-sub.sub-txt {
+  margin: 1.5rem 0;
+}
+
+.map-container {
+  width: 100%;
+}
+
+h4 {
+  font-family: 'Instrument Serif';
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 0.98;
+  font-weight: 400;
+  margin: 1.5rem 0;
 }
