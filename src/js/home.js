@@ -1,34 +1,15 @@
+import { initNav } from "./initNav";
+import { renderMenu } from './menu';
+import { renderContact } from './contact';
 
-
+import { setActiveButton } from "../index";
 
 export function renderHome() {
   const rightDivContainer = document.querySelector('.right-div-container:not(.hidden)');
 
   rightDivContainer.innerHTML = '';
   
-  const header = document.createElement('header')
-  const nav = document.createElement('nav')
-
-  const homeBtn = document.createElement('button')
-  const menuBtn = document.createElement('button')
-  const contactBtn = document.createElement('button')
-
-  homeBtn.textContent = "Home"
-  homeBtn.className = "home nav-btn"
-
-  menuBtn.textContent = "Menu"
-  menuBtn.className = "menu nav-btn" 
-
-  contactBtn.textContent = "Contact"
-  contactBtn.className = "contact nav-btn"
-
-  nav.appendChild(homeBtn)
-  nav.appendChild(menuBtn)
-  nav.appendChild(contactBtn)
-
-  header.appendChild(nav)
-
-  rightDivContainer.appendChild(header)
+  initNav()
 
   const h2 = document.createElement('h2')
   h2.textContent = "Authentic Kacchi Biryani, Cooked the Traditional Way"
@@ -62,7 +43,14 @@ export function renderHome() {
   btnContainer.appendChild(homeAboutBtn)
 
   rightDivContainer.appendChild(btnContainer)
-  
 
+  homeMenuBtn.addEventListener('click', () => {
+    renderMenu()
+    setActiveButton('menu');
+  })
 
+  homeAboutBtn.addEventListener('click', () => {
+    renderContact()
+    setActiveButton('contact');
+  })
 }

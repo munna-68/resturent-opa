@@ -2,34 +2,14 @@ import biriyaniImg from "../assets/images/biriyani.jpg";
 import morogPolauImg from "../assets/images/morog-polau.jpg";
 import teheriImg from "../assets/images/teheri.jpg";
 
+import { initNav } from "./initNav";
 
 export function renderMenu() {
   const rightDivContainer = document.querySelector('.right-div-container:not(.hidden)');
   rightDivContainer.innerHTML = '';
   
-  const header = document.createElement('header')
-  const nav = document.createElement('nav')
-
-  const homeBtn = document.createElement('button')
-  const menuBtn = document.createElement('button')
-  const contactBtn = document.createElement('button')
-
-  homeBtn.textContent = "Home"
-  homeBtn.className = "home nav-btn"
-
-  menuBtn.textContent = "Menu"
-  menuBtn.className = "menu nav-btn" 
-
-  contactBtn.textContent = "Contact"
-  contactBtn.className = "contact nav-btn"
-
-  nav.appendChild(homeBtn)
-  nav.appendChild(menuBtn)
-  nav.appendChild(contactBtn)
-
-  header.appendChild(nav)
-
-  rightDivContainer.appendChild(header)
+  initNav()
+  
 
   const menuHeadingContainer = document.createElement('div')
   menuHeadingContainer.className = "menu-heading-container"
