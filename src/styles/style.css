@@ -227,6 +227,7 @@ button.active {
 .menu-item-container {
   display: flex;
   margin-bottom: 2rem;
+  align-items: center;
 }
 
 .item-name-container {
